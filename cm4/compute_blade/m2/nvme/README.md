@@ -67,6 +67,7 @@ The full output of `/boot/config.txt` after imaging and options added.
 
 <details>
   <summary>Click here to expand...</summary>
+  
   ```
   dtoverlay=disable-bt
   dtoverlay=disable-wifi
