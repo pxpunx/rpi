@@ -23,6 +23,7 @@ nvme0n1     259:0    0 465.8G  0 disk
 
 <details>
   <summary>Click here to expand...</summary>
+  
   ```
   root@default-pi:~# lspci -vvv -s 01:00.0
   01:00.0 Non-Volatile memory controller: Micron/Crucial Technology Device 540a (rev 01) (prog-if 02 [NVM Express])
@@ -122,6 +123,7 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
 
 <details>
   <summary>Click here to expand...</summary>
+
   ```
   root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
 
