@@ -1,15 +1,16 @@
 # Product Information
 
 | Product | [WD Red SN700 NVMe™ SSD](https://www.westerndigital.com/products/internal-drives/wd-red-sn700-nvme-ssd#WDS250G1R0C) |
-|-|-|
-| **Name** | Western Digital Red SN700 |
-| **Model** | WDS250G1R0C |
-| **Capacity** | 500GB |
-| **Form Factor** | M.2 2280 |
-| **Key** | M |
-| **Interface** | NVMe |
-| **Bootable** | YES |
-| **Benchmark(s)** | JG (below) |
+|:-|:-|
+|----|----|
+| *Name* | Western Digital Red SN700 |
+| *Model* | WDS250G1R0C |
+| *Capacity* | 500GB |
+| *Form Factor* | M.2 2280 |
+| *Key* | M |
+| *Interface* | NVMe |
+| *Bootable* | YES |
+| *Benchmark(s)* | JG (below) |
 
 # Device Name
 
