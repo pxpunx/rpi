@@ -4,16 +4,16 @@ Notes from my M.2 SSD tests on the Compute Blade platform.
 
 | Product | Model | Capactiy | Form Factor | Key | Interface | Bootable |
 |:-|:-|:-|:-|:-|:-|:-|
-| [Crucial P3](crucial_p3_500.md) | CT500P3SSD8 | 500GB | M.2 2280 | M | NVMe | YES |
-| [Intel 670p](intel_670p_512.md) | SSDPEKNU512GZ | 512GB | M.2 2280 | M | NVMe | YES |
-| [Intel Optane M10](intel_optane_m10_32.md) | MEMPEK1J032GAD | 32GB | M.2 2280 | M + B | NVMe | NO |
-| [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A | 16GB + 256GB | M.2 2280 | M | NVMe | YES |
-| [Kingston NV2](kingston_nv2_250.md) | SNV2S250G | 250GB | M.2 2280 | M | NVMe | YES |
-| [Patriot P310](patriot_p310_240.md) | xxx | 240GB | M.2 2280 | M | NVMe | YES |
-| [PNY CS1030](pny_cs1030_250.md) | xxx | 250GB | M.2 2280 | M | NVMe | YES |
-| [Samsung 970 EVO](sec_970_evo_500.md) | MZ-V7E500BW | 500GB | M.2 2280 | M | NVMe | YES |
-| [WD Blue SN570](wd_blue_sn570_250.md) | WDS250G3B0C | 250GB | M.2 2280 | M | NVMe | YES |
-| [WD Red SN700](wd_red_sn700_500.md) | WDS250G1R0C | 500GB | M.2 2280 | M | NVMe | YES |
+| [Crucial P3](crucial_p3_500.md) | CT500P3SSD8 | 500GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [Intel 670p](intel_670p_512.md) | SSDPEKNU512GZ | 512GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [Intel Optane M10](intel_optane_m10_32.md) | MEMPEK1J032GAD | 32GB | M.2 2280 | M + B | NVMe | :x: |
+| [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A | 16GB + 256GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [Kingston NV2](kingston_nv2_250.md) | SNV2S250G | 250GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [Patriot P310](patriot_p310_240.md) | xxx | 240GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [PNY CS1030](pny_cs1030_250.md) | xxx | 250GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [Samsung 970 EVO](sec_970_evo_500.md) | MZ-V7E500BW | 500GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [WD Blue SN570](wd_blue_sn570_250.md) | WDS250G3B0C | 250GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| [WD Red SN700](wd_red_sn700_500.md) | WDS250G1R0C | 500GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
 
 _* See individual product details for benchmarks._
 
@@ -54,7 +54,7 @@ NVMe SSDs can be imaged the same way you'd image a microSD card.
 
 I used the ICY DOCK adapter and the official Raspberry Pi Imager to image the M.2 NVMe SSD with Raspberry Pi OS Lite (64-bit).
 
-:memo: The CM4 8GB Lite I used required a bootloader update to enable NVMe boot. Update instructions are outlined in the **Enable NVMe Boot** section below.
+> :memo: The CM4 8GB Lite I used required a bootloader update to enable NVMe boot. Update instructions are outlined in the **Enable NVMe Boot** section below.
 
 ## Options
 
