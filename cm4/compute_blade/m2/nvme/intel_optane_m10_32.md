@@ -1,9 +1,21 @@
-https://ark.intel.com/content/www/us/en/ark/products/135581/intel-optane-memory-m10-series-16gb-m-2-80mm-pcie-3-0-20nm-3d-xpoint.html
+# Product Information
+
+| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
+|-|-|-|-|-|-|-|-|
+| Intel Optane M10 | MEMPEK1J032GAD | 32GB | M.2 2280 | M + B | NVMe | NO (see below) | [PiB #67410](https://pibenchmarks.com/benchmark/67410/), JG (below) |
+
+Product brief: [Intel® Optane™ Memory M10 Series](https://ark.intel.com/content/www/us/en/ark/products/135581/intel-optane-memory-m10-series-16gb-m-2-80mm-pcie-3-0-20nm-3d-xpoint.html)
+
+This device will not boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane H10][intel_optane_h10_16+256.md].
+
+# Device Name
 
 ```
 root@default-pi:~# lsblk | grep nvme[01]
 nvme0n1     259:0    0 27.3G  0 disk 
 ```
+
+# Device Information
 
 ```
 root@default-pi:~# lspci -vvv -s 01:00.0
@@ -87,6 +99,8 @@ root@default-pi:~# lspci -vvv -s 01:00.0
 	Kernel driver in use: nvme
 ```
 
+# Disk Information
+
 ```
 root@default-pi:~# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 27.25 GiB, 29260513280 bytes, 57149440 sectors
@@ -96,11 +110,15 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 
+# Filesystem Information
+
 ```
 root@default-pi:~# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4   27G   24K   26G   1% /mnt/sda1
 ```
+
+# Jeff Geerling Benchmark
 
 ```
 root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
@@ -216,12 +234,9 @@ iozone test complete.
 Disk benchmark complete!
 ```
 
-Intel Optane M10 32GB on Compute Blade w/ CM4 8GB Lite (CM4008000)
-https://pibenchmarks.com/benchmark/67410/
+# Boot Information
 
------
-
-bootable: NO
+## Console Output
 
 ```
 RPi: BOOTLOADER release VERSION:8ba17717 DATE: 2023/01/11 TIME: 17:40:52
@@ -264,6 +279,7 @@ Restart 0 max -1
 < repeats from 'Boot mode: NVME (06) order f1' >
 ```
 
+## Device Name(s)
 
 ```
 root@default-pi:~# lsblk | grep nvme[01]
@@ -271,6 +287,8 @@ nvme0n1     259:0    0 27.3G  0 disk
 ├─nvme0n1p1 259:1    0  256M  0 part 
 └─nvme0n1p2 259:2    0  1.6G  0 part 
 ```
+
+# Disk Information
 
 ```
 root@default-pi:~# fdisk -l /dev/nvme0n1
@@ -287,6 +305,8 @@ Device         Boot  Start     End Sectors  Size Id Type
 /dev/nvme0n1p2      532480 3923967 3391488  1.6G 83 Linux
 ```
 
+## Bootloader Version
+
 ```
 root@default-pi:~# vcgencmd bootloader_version
 2023/01/11 17:40:52
@@ -295,6 +315,8 @@ timestamp 1673458852
 update-time 1676831636
 capabilities 0x0000007f
 ```
+
+## Bootloader Configuration
 
 ```
 root@default-pi:~# vcgencmd bootloader_config
@@ -312,6 +334,8 @@ BOOT_ORDER=0xf16
 # For remote units EEPROM hardware write protection should be used.
 ENABLE_SELF_UPDATE=1
 ```
+
+## `nvme` Output
 
 ```
 root@default-pi:~# nvme version

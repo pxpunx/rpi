@@ -1,11 +1,19 @@
+# Product Information
+
+| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
+|-|-|-|-|-|-|-|-|
+| Kingston NV2 | SNV2S250G | 250GB | M.2 2280 | M | NVMe | YES | [PiB #67389](https://pibenchmarks.com/benchmark/67389/), JG (below) |
+
+Product brief: [NV2 PCIe 4.0 NVMe SSD 250GB – 2TB - Kingston Technology](https://www.kingston.com/en/ssd/nv2-nvme-pcie-ssd)
+
+# Device Name
+
 ```
-root@default-pi:~# lsblk
-NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-mmcblk0     179:0    0  29.8G  0 disk 
-├─mmcblk0p1 179:1    0   256M  0 part /boot
-└─mmcblk0p2 179:2    0  29.6G  0 part /
+root@default-pi:~# lsblk | grep nvme[01]
 nvme0n1     259:0    0 232.9G  0 disk
 ```
+
+# Device Information
 
 ```
 root@default-pi:~# lspci -vvv -s 01:00.0
@@ -76,6 +84,8 @@ root@default-pi:~# lspci -vvv -s 01:00.0
 	Kernel driver in use: nvme
 ```
 
+# Disk Information
+
 ```
 root@default-pi:~# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 232.89 GiB, 250059350016 bytes, 488397168 sectors
@@ -85,11 +95,15 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 
+# Filesystem Information
+
 ```
 root@default-pi:~# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  229G   28K  217G   1% /mnt/sda1
 ```
+
+# Jeff Geerling Benchmark
 
 ```
 root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
@@ -206,6 +220,3 @@ iozone test complete.
 
 Disk benchmark complete!
 ```
-
-Kingston NV2 250G on Compute Blade w/ CM4 8GB Lite (CM4008000)
-https://pibenchmarks.com/benchmark/67389/

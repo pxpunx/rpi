@@ -1,7 +1,19 @@
+# Product Information
+
+| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
+|-|-|-|-|-|-|-|-|
+| Western Digital Red SN700 | WDS250G1R0C | 500GB | M.2 2280 | M | NVMe | YES | [PiB #xxx](https://pibenchmarks.com/benchmark/xxx/), JG (below) |
+
+Product brief: [WD Red SN700 NVMe™ SSD](https://www.westerndigital.com/products/internal-drives/wd-red-sn700-nvme-ssd#WDS250G1R0C)
+
+# Device Name
+
 ```
 root@default-pi:~# lsblk | grep nvme[01]
 nvme0n1     259:0    0 465.8G  0 disk 
 ```
+
+# Device Information
 
 ```
 root@default-pi:~# lspci -vvv -s 01:00.0
@@ -73,6 +85,8 @@ root@default-pi:~# lspci -vvv -s 01:00.0
 	Kernel driver in use: nvme
 ```
 
+# Disk Information
+
 ```
 root@default-pi:~# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 465.76 GiB, 500107862016 bytes, 976773168 sectors
@@ -84,11 +98,15 @@ Disklabel type: dos
 Disk identifier: 0x21e60f8c
 ```
 
+# Filesystem Information
+
 ```
 root@default-pi:~# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  458G   28K  435G   1% /mnt/sda1
 ```
+
+# Jeff Geerling Benchmark
 
 ```
 root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
@@ -205,7 +223,3 @@ iozone test complete.
 
 Disk benchmark complete!
 ```
-
-WD Red SN700 500GB on Compute Blade w/ CM4 8GB Lite (CM4008000)
-
-bootable: YES

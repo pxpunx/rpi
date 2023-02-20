@@ -1,4 +1,22 @@
-https://ark.intel.com/content/www/us/en/ark/products/189614/intel-optane-memory-h10-with-solid-state-storage-intel-optane-memory-16gb-intel-qlc-3d-nand-ssd-256gb-m-2-80mm-pcie-3-0.html
+# Product Information
+
+| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
+|-|-|-|-|-|-|-|-|
+| Intel Optane H10 | HBRPEKNX0101A | 16GB + 256GB | M.2 2280 | M | NVMe | YES | JG (below) |
+
+Product brief: [Intel® Optane™ Memory H10 with Solid State Storage](https://ark.intel.com/content/www/us/en/ark/products/189614/intel-optane-memory-h10-with-solid-state-storage-intel-optane-memory-16gb-intel-qlc-3d-nand-ssd-256gb-m-2-80mm-pcie-3-0.html)
+
+This NVMe device has a 16GB of Optane (3D XPoint) NVM as well as a 256GB SSD on the same M.2 device. 
+
+CM4 has one PCIe Gen2 lane; it's not possible to utilize both "disks" on the the H10. 
+
+In this case, the 256GB SSD is usable, but the 16GB of Optane NVM is not.
+
+> *Intel Optane Memory H10 is essentially a hybrid SSD product that fuses two Intel Technologies on to one M.2 PCIe x 4 device. The SSD solution includes Intel Optane Memory functioning as cache combined with the Intel 660P SSD functioning as storage. The benefit of combining these products together is that consumers can now further improve the performance of their SSD through the addition of 3D Xpoint memory which Intel brands as Optane. The storage and caching combination is available in several flavors with the cache being either 16GB or 32GB and the storage being 256GB, 512GB or 1TB. **With this concept, Intel is essentially combining two PCIe x 2 products on to one M.2 form factor so the device internally bifurcates the PCIe x4 lane into two PCIe x 2 lanes, one for the Intel Optane Memory cache and the other for the Intel 660P. Managing this setup makes integrating the H10 more complex than simply adding the module to a system. There are differing considerations that include chipset compatibility, MB compatibility, proper M.2 slot configuration, proper BIOS, proper Windows drivers, proper MB firmware, as well as the correct Intel RST driver and of course proper setup of the entire configuration.** It is for these reasons that the H10 is not intended to be sold as a standalone device and is intended to be integrated by the reseller or by ASI.*
+
+> Source: https://www.asipartner.com/solutions/gaming/intel-optane-memory-h10/#MB%20Compatibility%20List
+
+Unlike the M10, this device *can* boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane M10][intel_optane_m10_32.md].
 
 ```
 root@default-pi:~# lsblk | grep nvme[01]
@@ -205,19 +223,9 @@ iozone test complete.
 Disk benchmark complete!
 ```
 
-Intel Optane H10 16GB+256GB on Compute Blade w/ CM4 8GB Lite (CM4008000)
+# Boot Information
 
-xxx
-
-https://www.asipartner.com/solutions/gaming/intel-optane-memory-h10/#MB%20Compatibility%20List
-
-> Intel Optane Memory H10 is essentially a hybrid SSD product that fuses two Intel Technologies on to one M.2 PCIe x 4 device. The SSD solution includes Intel Optane Memory functioning as cache combined with the Intel 660P SSD functioning as storage. The benefit of combining these products together is that consumers can now further improve the performance of their SSD through the addition of 3D Xpoint memory which Intel brands as Optane. The storage and caching combination is available in several flavors with the cache being either 16GB or 32GB and the storage being 256GB, 512GB or 1TB. **With this concept, Intel is essentially combining two PCIe x 2 products on to one M.2 form factor so the device internally bifurcates the PCIe x4 lane into two PCIe x 2 lanes, one for the Intel Optane Memory cache and the other for the Intel 660P. Managing this setup makes integrating the H10 more complex than simply adding the module to a system. There are differing considerations that include chipset compatibility, MB compatibility, proper M.2 slot configuration, proper BIOS, proper Windows drivers, proper MB firmware, as well as the correct Intel RST driver and of course proper setup of the entire configuration.** It is for these reasons that the H10 is not intended to be sold as a standalone device and is intended to be integrated by the reseller or by ASI.
-
-CM4 has one PCIe Gen2 lane; it's not possible to utilize both "disks" on the the H10.
-
-bootable: YES
-
-=====
+## Device Name(s)
 
 ```
 root@default-pi:~# lsblk | grep nvme[01]
@@ -225,6 +233,8 @@ nvme0n1     259:0    0 238.5G  0 disk
 ├─nvme0n1p1 259:1    0   256M  0 part /boot
 └─nvme0n1p2 259:2    0 238.2G  0 part /
 ```
+
+## Disk Information
 
 ```
 root@default-pi:~# fdisk -l /dev/nvme0n1
@@ -241,6 +251,8 @@ Device         Boot  Start       End   Sectors   Size Id Type
 /dev/nvme0n1p2      532480 500118191 499585712 238.2G 83 Linux
 ```
 
+## Bootloader Version
+
 ```
 root@default-pi:~# vcgencmd bootloader_version
 2023/01/11 17:40:52
@@ -249,6 +261,8 @@ timestamp 1673458852
 update-time 1676831636
 capabilities 0x0000007f
 ```
+
+## Bootloader Configuration
 
 ```
 root@default-pi:~# vcgencmd bootloader_config
@@ -266,6 +280,8 @@ BOOT_ORDER=0xf16
 # For remote units EEPROM hardware write protection should be used.
 ENABLE_SELF_UPDATE=1
 ```
+
+## `nvme` Output
 
 ```
 root@default-pi:~# nvme version

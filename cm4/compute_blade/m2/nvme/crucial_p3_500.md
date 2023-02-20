@@ -1,15 +1,17 @@
+# Product Information
 
+| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
+|-|-|-|-|-|-|-|-|
+| Crucial P3 | CT500P3SSD8 | 500GB | M.2 2280 | M | NVMe | YES | [PiB #67377](https://pibenchmarks.com/benchmark/67377/), JG (below) |
 
-
+# Device Name
 
 ```
-root@default-pi:~# lsblk
-NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
-mmcblk0     179:0    0  29.8G  0 disk 
-├─mmcblk0p1 179:1    0   256M  0 part /boot
-└─mmcblk0p2 179:2    0  29.6G  0 part /
+root@default-pi:~# lsblk | grep nvme[01]
 nvme0n1     259:0    0 465.8G  0 disk 
 ```
+
+# Device Information
 
 ```
 root@default-pi:~# lspci -vvv -s 01:00.0
@@ -85,6 +87,8 @@ root@default-pi:~# lspci -vvv -s 01:00.0
 
 ```
 
+# Disk Information
+
 ```
 root@default-pi:~# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 465.76 GiB, 500107862016 bytes, 976773168 sectors
@@ -94,11 +98,15 @@ Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 ```
 
+# Filesystem Information
+
 ```
 root@default-pi:~# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  458G   28K  435G   1% /mnt/sda1
 ```
+
+# Jeff Geerling Benchmark
 
 ```
 root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
@@ -217,8 +225,3 @@ iozone test complete.
 
 Disk benchmark complete!
 ```
-
-Crucial P3 500GB on Compute Blade w/ CM4 8GB Lite (CM4008000)
-https://pibenchmarks.com/benchmark/67377/
-
-bootable: YES
