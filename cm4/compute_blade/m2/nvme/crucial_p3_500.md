@@ -1,8 +1,15 @@
 # Product Information
 
-| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
-|-|-|-|-|-|-|-|-|
-| Crucial P3 | CT500P3SSD8 | 500GB | M.2 2280 | M | NVMe | YES | [PiB #67377](https://pibenchmarks.com/benchmark/67377/), JG (below) |
+| | |
+|-|-|
+| **Name** | Crucial P3 |
+| **Model** | CT500P3SSD8 |
+| **Capacity** | 500GB |
+| **Form Factor** | M.2 2280 |
+| **Key** | M |
+| **Interface** | NVMe |
+| **Bootable** | YES |
+| **Benchmark(s)** | [PiB #67377](https://pibenchmarks.com/benchmark/67377/), JG (below) |
 
 # Device Name
 

@@ -1,5 +1,7 @@
 # NVMe Benchmark
 
+## Method
+
 * `lsblk` to find device name.
 * `lspci -vvv -s 01:00.0` to collect device info.
 * `fdisk -l /dev/nvme0n1` to collect disk info.

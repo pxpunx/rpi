@@ -1,8 +1,15 @@
 # Product Information
 
-| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
-|-|-|-|-|-|-|-|-|
-| Intel Optane M10 | MEMPEK1J032GAD | 32GB | M.2 2280 | M + B | NVMe | NO (see below) | [PiB #67410](https://pibenchmarks.com/benchmark/67410/), JG (below) |
+| | |
+|-|-|
+| **Name** | Intel Optane M10 |
+| **Model** | MEMPEK1J032GAD |
+| **Capacity** | 32GB |
+| **Form Factor** | M.2 2280 |
+| **Key** | M + B |
+| **Interface** | NVMe |
+| **Bootable** | NO (see below) |
+| **Benchmark(s)** | [PiB #67410](https://pibenchmarks.com/benchmark/67410/), JG (below) |
 
 Product brief: [Intel® Optane™ Memory M10 Series](https://ark.intel.com/content/www/us/en/ark/products/135581/intel-optane-memory-m10-series-16gb-m-2-80mm-pcie-3-0-20nm-3d-xpoint.html)
 

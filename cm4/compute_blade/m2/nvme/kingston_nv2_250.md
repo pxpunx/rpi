@@ -1,8 +1,15 @@
 # Product Information
 
-| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
-|-|-|-|-|-|-|-|-|
-| Kingston NV2 | SNV2S250G | 250GB | M.2 2280 | M | NVMe | YES | [PiB #67389](https://pibenchmarks.com/benchmark/67389/), JG (below) |
+| | |
+|-|-|
+| **Name** | Kingston NV2 |
+| **Model** | SNV2S250G |
+| **Capacity** | 250GB |
+| **Form Factor** | M.2 2280 |
+| **Key** | M |
+| **Interface** | NVMe |
+| **Bootable** | YES |
+| **Benchmark(s)** | [PiB #67389](https://pibenchmarks.com/benchmark/67389/), JG (below) |
 
 Product brief: [NV2 PCIe 4.0 NVMe SSD 250GB – 2TB - Kingston Technology](https://www.kingston.com/en/ssd/nv2-nvme-pcie-ssd)
 

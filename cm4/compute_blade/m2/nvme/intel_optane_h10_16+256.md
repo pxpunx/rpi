@@ -1,8 +1,15 @@
 # Product Information
 
-| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
-|-|-|-|-|-|-|-|-|
-| Intel Optane H10 | HBRPEKNX0101A | 16GB + 256GB | M.2 2280 | M | NVMe | YES | JG (below) |
+| | |
+|-|-|
+| **Name** | Intel Optane H10 |
+| **Model** | HBRPEKNX0101A |
+| **Capacity** | 16GB + 256GB |
+| **Form Factor** | M.2 2280 |
+| **Key** | M |
+| **Interface** | NVMe |
+| **Bootable** | YES |
+| **Benchmark(s)** | JG (below) |
 
 Product brief: [Intel® Optane™ Memory H10 with Solid State Storage](https://ark.intel.com/content/www/us/en/ark/products/189614/intel-optane-memory-h10-with-solid-state-storage-intel-optane-memory-16gb-intel-qlc-3d-nand-ssd-256gb-m-2-80mm-pcie-3-0.html)
 

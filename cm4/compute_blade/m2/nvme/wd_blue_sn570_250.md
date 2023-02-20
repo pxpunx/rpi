@@ -1,10 +1,15 @@
 # Product Information
 
-| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
-|-|-|-|-|-|-|-|-|
-| Western Digital Blue SN570 | WDS250G3B0C | 250GB | M.2 2280 | M | NVMe | YES | [PiB #67387](https://pibenchmarks.com/benchmark/67387/), JG (below) |
-
-Product brief: [WD Blue SN570 NVMe™ SSD](https://www.westerndigital.com/products/internal-drives/wd-blue-sn570-nvme-ssd)
+| Product | [WD Blue SN570 NVMe™ SSD](https://www.westerndigital.com/products/internal-drives/wd-blue-sn570-nvme-ssd) |
+|-|-|
+| **Name** | Western Digital Blue SN570 |
+| **Model** | WDS250G3B0C |
+| **Capacity** | 250GB |
+| **Form Factor** | M.2 2280 |
+| **Key** | M |
+| **Interface** | NVMe |
+| **Bootable** | YES |
+| **Benchmark(s)** | [PiB #67387](https://pibenchmarks.com/benchmark/67387/), JG (below) |
 
 # Device Name
 

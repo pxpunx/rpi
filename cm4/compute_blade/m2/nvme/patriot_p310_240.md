@@ -1,8 +1,15 @@
 # Product Information
 
-| Name | Model | Capacity | Form Factor | Key | Interface | Bootable | Benchmark(s) |
-|-|-|-|-|-|-|-|-|
-| Patriot P310 | xxx | 240GB | M.2 2280 | M | NVMe | YES | [PiB #67390](https://pibenchmarks.com/benchmark/67390/), JG (below) |
+| | |
+|-|-|
+| **Name** | Patriot P310 |
+| **Model** | XXX |
+| **Capacity** | 240GB |
+| **Form Factor** | M.2 2280 |
+| **Key** | M |
+| **Interface** | NVMe |
+| **Bootable** | YES |
+| **Benchmark(s)** | [PiB #67390](https://pibenchmarks.com/benchmark/67390/), JG (below) |
 
 Product brief: [Patriot P310 PCIe m.2 SSD](https://www.patriotmemory.com/products/p310-new-pcie-m-2-internal-ssd)
 
