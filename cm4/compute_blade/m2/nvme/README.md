@@ -65,96 +65,99 @@ diskutil unmountdisk /dev/disk5 && diskutil eject /dev/disk5
 
 The full output of `/boot/config.txt` after imaging and options added.
 
-```
-dtoverlay=disable-bt
-dtoverlay=disable-wifi
-enable_uart=1
-uart_2ndstage=1
+<details>
+  <summary>Click here to expand...</summary>
+  ```
+  dtoverlay=disable-bt
+  dtoverlay=disable-wifi
+  enable_uart=1
+  uart_2ndstage=1
 
-# For more options and information see
-# http://rpf.io/configtxt
-# Some settings may impact device functionality. See link above for details
+  # For more options and information see
+  # http://rpf.io/configtxt
+  # Some settings may impact device functionality. See link above for details
 
-# uncomment if you get no picture on HDMI for a default "safe" mode
-#hdmi_safe=1
+  # uncomment if you get no picture on HDMI for a default "safe" mode
+  #hdmi_safe=1
 
-# uncomment the following to adjust overscan. Use positive numbers if console
-# goes off screen, and negative if there is too much border
-#overscan_left=16
-#overscan_right=16
-#overscan_top=16
-#overscan_bottom=16
+  # uncomment the following to adjust overscan. Use positive numbers if console
+  # goes off screen, and negative if there is too much border
+  #overscan_left=16
+  #overscan_right=16
+  #overscan_top=16
+  #overscan_bottom=16
 
-# uncomment to force a console size. By default it will be display's size minus
-# overscan.
-#framebuffer_width=1280
-#framebuffer_height=720
+  # uncomment to force a console size. By default it will be display's size minus
+  # overscan.
+  #framebuffer_width=1280
+  #framebuffer_height=720
 
-# uncomment if hdmi display is not detected and composite is being output
-#hdmi_force_hotplug=1
+  # uncomment if hdmi display is not detected and composite is being output
+  #hdmi_force_hotplug=1
 
-# uncomment to force a specific HDMI mode (this will force VGA)
-#hdmi_group=1
-#hdmi_mode=1
+  # uncomment to force a specific HDMI mode (this will force VGA)
+  #hdmi_group=1
+  #hdmi_mode=1
 
-# uncomment to force a HDMI mode rather than DVI. This can make audio work in
-# DMT (computer monitor) modes
-#hdmi_drive=2
+  # uncomment to force a HDMI mode rather than DVI. This can make audio work in
+  # DMT (computer monitor) modes
+  #hdmi_drive=2
 
-# uncomment to increase signal to HDMI, if you have interference, blanking, or
-# no display
-#config_hdmi_boost=4
+  # uncomment to increase signal to HDMI, if you have interference, blanking, or
+  # no display
+  #config_hdmi_boost=4
 
-# uncomment for composite PAL
-#sdtv_mode=2
+  # uncomment for composite PAL
+  #sdtv_mode=2
 
-#uncomment to overclock the arm. 700 MHz is the default.
-#arm_freq=800
+  #uncomment to overclock the arm. 700 MHz is the default.
+  #arm_freq=800
 
-# Uncomment some or all of these to enable the optional hardware interfaces
-#dtparam=i2c_arm=on
-#dtparam=i2s=on
-#dtparam=spi=on
+  # Uncomment some or all of these to enable the optional hardware interfaces
+  #dtparam=i2c_arm=on
+  #dtparam=i2s=on
+  #dtparam=spi=on
 
-# Uncomment this to enable infrared communication.
-#dtoverlay=gpio-ir,gpio_pin=17
-#dtoverlay=gpio-ir-tx,gpio_pin=18
+  # Uncomment this to enable infrared communication.
+  #dtoverlay=gpio-ir,gpio_pin=17
+  #dtoverlay=gpio-ir-tx,gpio_pin=18
 
-# Additional overlays and parameters are documented /boot/overlays/README
+  # Additional overlays and parameters are documented /boot/overlays/README
 
-# Enable audio (loads snd_bcm2835)
-dtparam=audio=on
+  # Enable audio (loads snd_bcm2835)
+  dtparam=audio=on
 
-# Automatically load overlays for detected cameras
-camera_auto_detect=1
+  # Automatically load overlays for detected cameras
+  camera_auto_detect=1
 
-# Automatically load overlays for detected DSI displays
-display_auto_detect=1
+  # Automatically load overlays for detected DSI displays
+  display_auto_detect=1
 
-# Enable DRM VC4 V3D driver
-dtoverlay=vc4-kms-v3d
-max_framebuffers=2
+  # Enable DRM VC4 V3D driver
+  dtoverlay=vc4-kms-v3d
+  max_framebuffers=2
 
-# Run in 64-bit mode
-arm_64bit=1
+  # Run in 64-bit mode
+  arm_64bit=1
 
-# Disable compensation for displays with overscan
-disable_overscan=1
+  # Disable compensation for displays with overscan
+  disable_overscan=1
 
-[cm4]
-# Enable host mode on the 2711 built-in XHCI USB controller.
-# This line should be removed if the legacy DWC2 controller is required
-# (e.g. for USB device mode) or if USB support is not required.
-otg_mode=1
+  [cm4]
+  # Enable host mode on the 2711 built-in XHCI USB controller.
+  # This line should be removed if the legacy DWC2 controller is required
+  # (e.g. for USB device mode) or if USB support is not required.
+  otg_mode=1
 
-[all]
+  [all]
 
-[pi4]
-# Run as fast as firmware / board allows
-arm_boost=1
+  [pi4]
+  # Run as fast as firmware / board allows
+  arm_boost=1
 
-[all]
-```
+  [all]
+  ```
+</details>
 
 ### /boot/cmdline.txt
 
@@ -166,12 +169,12 @@ console=serial0,115200 console=tty1 root=PARTUUID=21e60f8c-02 rootfstype=ext4 fs
 
 # Enable NVMe Boot
 
-Update a CM4 via Compute Blade dev board USB-C interface.
+Update the CM4's bootloader via a Compute Blade dev board's USB-C interface.
 
 1. Switch to USB-C mode.
-1. Hold the nRPIBOOT button.
-1. Connect the USB-C port on the Compute Blade to a Linux or macOS host computer.
-    * You can power the board in this scenario via USB-C or PoE, but the USB-C port must be connected in either scenario.
+1. Press and hold the nRPIBOOT button.
+1. Connect the USB-C port on the Compute Blade to a Linux or macOS-based host computer.
+    * You can power the board via USB-C or PoE, but the USB-C port must be connected in either scenario.
 1. Wait a few seconds until the board has powered up.
 1. Release the nRPIBOOT button.
     * The host computer may prompt you to allow the connection of a new USB device, ex. "BCM2835" - this is the CM4/Compute Blade. Accept the connection.
@@ -189,7 +192,6 @@ Update a CM4 via Compute Blade dev board USB-C interface.
 1. `./update-pieeprom.sh`
 1. `cd ../`
 1. `sudo ./rpiboot -d recovery` (see example output below)
-    * The host computer may prompt you to allow the connection of a new USB device, ex. "BCM2835" - this is the CM4/Compute Blade. Accept the connection.
 
 The update should be complete. Reboot the Compute Blade and it should boot from the attached NVMe SSD.
 

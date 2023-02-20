@@ -1,29 +1,28 @@
 # Product Information
 
-| | |
-|-|-|
-| **Name** | Patriot P310 |
-| **Model** | XXX |
-| **Capacity** | 240GB |
-| **Form Factor** | M.2 2280 |
-| **Key** | M |
-| **Interface** | NVMe |
-| **Bootable** | YES |
-| **Benchmark(s)** | [PiB #67390](https://pibenchmarks.com/benchmark/67390/), JG (below) |
-
-Product brief: [Patriot P310 PCIe m.2 SSD](https://www.patriotmemory.com/products/p310-new-pcie-m-2-internal-ssd)
+| Product | [Patriot P310 PCIe m.2 SSD](https://www.patriotmemory.com/products/p310-new-pcie-m-2-internal-ssd) |
+|:-|:-|
+|----|----|
+| *Name* | Patriot P310 |
+| *Model* | XXX |
+| *Capacity* | 240GB |
+| *Form Factor* | M.2 2280 |
+| *Key* | M |
+| *Interface* | NVMe |
+| *Bootable* | YES |
+| *Benchmark(s)* | [pibenchmarks.com #67390](https://pibenchmarks.com/benchmark/67390/), local (below) |
 
 # Device Name
 
 ```
-root@default-pi:~# lsblk | grep nvme[01]
+# lsblk | grep nvme[01]
 nvme0n1     259:0    0 223.6G  0 disk 
 ```
 
 # Device Information
 
 ```
-root@default-pi:~# lspci -vvv -s 01:00.0
+# lspci -vvv -s 01:00.0
 01:00.0 Non-Volatile memory controller: MAXIO Technology (Hangzhou) Ltd. NVMe SSD Controller MAP1202 (rev 01) (prog-if 02 [NVM Express])
 	Subsystem: MAXIO Technology (Hangzhou) Ltd. NVMe SSD Controller MAP1202
 	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
@@ -100,7 +99,7 @@ root@default-pi:~# lspci -vvv -s 01:00.0
 # Disk Information
 
 ```
-root@default-pi:~# fdisk -l /dev/nvme0n1
+# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 223.57 GiB, 240057409536 bytes, 468862128 sectors
 Disk model: Patriot M.2 P310 240GB                  
 Units: sectors of 1 * 512 = 512 bytes
@@ -111,15 +110,17 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 # Filesystem Information
 
 ```
-root@default-pi:~# df -Th /dev/nvme0n1
+# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  220G   28K  208G   1% /mnt/sda1
 ```
 
-# Jeff Geerling Benchmark
+# Local Benchmark
+
+Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 
 ```
-root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
+# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
 
 Raspberry Pi disk benchmarks
 Running fio sequential read test...

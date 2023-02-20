@@ -1,31 +1,30 @@
 # Product Information
 
-| | |
-|-|-|
-| **Name** | Intel Optane M10 |
-| **Model** | MEMPEK1J032GAD |
-| **Capacity** | 32GB |
-| **Form Factor** | M.2 2280 |
-| **Key** | M + B |
-| **Interface** | NVMe |
-| **Bootable** | NO (see below) |
-| **Benchmark(s)** | [PiB #67410](https://pibenchmarks.com/benchmark/67410/), JG (below) |
-
-Product brief: [Intel® Optane™ Memory M10 Series](https://ark.intel.com/content/www/us/en/ark/products/135581/intel-optane-memory-m10-series-16gb-m-2-80mm-pcie-3-0-20nm-3d-xpoint.html)
+| Product | [Intel® Optane™ Memory M10 Series](https://ark.intel.com/content/www/us/en/ark/products/135581/intel-optane-memory-m10-series-16gb-m-2-80mm-pcie-3-0-20nm-3d-xpoint.html) |
+|:-|:-|
+|----|----|
+| *Name* | Intel Optane M10 |
+| *Model* | MEMPEK1J032GAD |
+| *Capacity* | 32GB |
+| *Form Factor* | M.2 2280 |
+| *Key* | M + B |
+| *Interface* | NVMe |
+| *Bootable* | NO (see below) |
+| *Benchmark(s)* | [pibenchmarks.com #67410](https://pibenchmarks.com/benchmark/67410/), local (below) |
 
 This device will not boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane H10][intel_optane_h10_16+256.md].
 
 # Device Name
 
 ```
-root@default-pi:~# lsblk | grep nvme[01]
+# lsblk | grep nvme[01]
 nvme0n1     259:0    0 27.3G  0 disk 
 ```
 
 # Device Information
 
 ```
-root@default-pi:~# lspci -vvv -s 01:00.0
+# lspci -vvv -s 01:00.0
 01:00.0 Non-Volatile memory controller: Intel Corporation NVMe Optane Memory Series (prog-if 02 [NVM Express])
 	Subsystem: Intel Corporation Optane Memory M10 16GB
 	Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
@@ -109,7 +108,7 @@ root@default-pi:~# lspci -vvv -s 01:00.0
 # Disk Information
 
 ```
-root@default-pi:~# fdisk -l /dev/nvme0n1
+# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 27.25 GiB, 29260513280 bytes, 57149440 sectors
 Disk model: INTEL MEMPEK1J032GAD                    
 Units: sectors of 1 * 512 = 512 bytes
@@ -120,15 +119,17 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 # Filesystem Information
 
 ```
-root@default-pi:~# df -Th /dev/nvme0n1
+# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4   27G   24K   26G   1% /mnt/sda1
 ```
 
-# Jeff Geerling Benchmark
+# Local Benchmark
+
+Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 
 ```
-root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
+# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
 
 Raspberry Pi disk benchmarks
 Running fio sequential read test...
@@ -289,7 +290,7 @@ Restart 0 max -1
 ## Device Name(s)
 
 ```
-root@default-pi:~# lsblk | grep nvme[01]
+# lsblk | grep nvme[01]
 nvme0n1     259:0    0 27.3G  0 disk 
 ├─nvme0n1p1 259:1    0  256M  0 part 
 └─nvme0n1p2 259:2    0  1.6G  0 part 
@@ -298,7 +299,7 @@ nvme0n1     259:0    0 27.3G  0 disk
 # Disk Information
 
 ```
-root@default-pi:~# fdisk -l /dev/nvme0n1
+# fdisk -l /dev/nvme0n1
 Disk /dev/nvme0n1: 27.25 GiB, 29260513280 bytes, 57149440 sectors
 Disk model: INTEL MEMPEK1J032GAD                    
 Units: sectors of 1 * 512 = 512 bytes
@@ -315,7 +316,7 @@ Device         Boot  Start     End Sectors  Size Id Type
 ## Bootloader Version
 
 ```
-root@default-pi:~# vcgencmd bootloader_version
+# vcgencmd bootloader_version
 2023/01/11 17:40:52
 version 8ba17717fbcedd4c3b6d4bce7e50c7af4155cba9 (release)
 timestamp 1673458852
@@ -326,7 +327,7 @@ capabilities 0x0000007f
 ## Bootloader Configuration
 
 ```
-root@default-pi:~# vcgencmd bootloader_config
+# vcgencmd bootloader_config
 [all]
 BOOT_UART=1
 WAKE_ON_GPIO=1
@@ -345,26 +346,26 @@ ENABLE_SELF_UPDATE=1
 ## `nvme` Output
 
 ```
-root@default-pi:~# nvme version
+# nvme version
 nvme version 1.12
 ```
 
 ```
-root@default-pi:~# nvme list
+# nvme list
 Node             SN                   Model                                    Namespace Usage                      Format           FW Rev  
 ---------------- -------------------- ---------------------------------------- --------- -------------------------- ---------------- --------
 /dev/nvme0n1     PHBT9135037D032P     INTEL MEMPEK1J032GAD                     1          29.26  GB /  29.26  GB    512   B +  0 B   K4110440
 ```
 
 ```
-root@default-pi:~# nvme list-subsys
+# nvme list-subsys
 nvme-subsys0 - NQN=nqn.2014.08.org.nvmexpress:80868086PHBT9135037D032P    INTEL MEMPEK1J032GAD                    
 \
  +- nvme0 pcie 0000:01:00.0 live 
 ```
 
 ```
-root@default-pi:~# nvme id-ctrl -H /dev/nvme0n1
+# nvme id-ctrl -H /dev/nvme0n1
 NVME Identify Controller:
 vid       : 0x8086
 ssvid     : 0x8086
@@ -556,12 +557,12 @@ ps    3 : mp:0.0080W non-operational enlat:1150000 exlat:30000 rrt:0 rrl:0
 ```
 
 ```
-root@default-pi:~# nvme list-ns /dev/nvme0n1
+# nvme list-ns /dev/nvme0n1
 [   0]:0x1
 ```
 
 ```
-root@default-pi:~# nvme id-ns -H /dev/nvme0n1 --namespace-id=1
+# nvme id-ns -H /dev/nvme0n1 --namespace-id=1
 NVME Identify Namespace 1:
 nsze    : 0x3680800
 ncap    : 0x3680800
