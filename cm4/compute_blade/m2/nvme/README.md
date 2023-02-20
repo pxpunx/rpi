@@ -1,3 +1,22 @@
+Notes from my M.2 SSD tests on the Compute Blade platform.
+
+# Product List
+
+| Product | Model | Capactiy | Form Factor | Key | Interface | Bootable |
+|:-|:-|:-|:-|:-|:-|:-|
+| [Crucial P3](crucial_p3_500.md) | CT500P3SSD8 | 500GB | M.2 2280 | M | NVMe | YES |
+| [Intel 670p](intel_670p_512.md) | SSDPEKNU512GZ | 512GB | M.2 2280 | M | NVMe | YES |
+| [Intel Optane M10](intel_optane_m10_32.md) | MEMPEK1J032GAD | 32GB | M.2 2280 | M + B | NVMe | NO |
+| [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A | 16GB + 256GB | M.2 2280 | M | NVMe | YES |
+| [Kingston NV2](kingston_nv2_250.md) | SNV2S250G | 250GB | M.2 2280 | M | NVMe | YES |
+| [Patriot P310](patriot_p310_240.md) | xxx | 240GB | M.2 2280 | M | NVMe | YES |
+| [PNY CS1030](pny_cs1030_250.md) | xxx | 250GB | M.2 2280 | M | NVMe | YES |
+| [Samsung 970 EVO](sec_970_evo_500.md) | MZ-V7E500BW | 500GB | M.2 2280 | M | NVMe | YES |
+| [WD Blue SN570](wd_blue_sn570_250.md) | WDS250G3B0C | 250GB | M.2 2280 | M | NVMe | YES |
+| [WD Red SN700](wd_red_sn700_500.md) | WDS250G1R0C | 500GB | M.2 2280 | M | NVMe | YES |
+
+_* See individual product details for benchmarks._
+
 # NVMe Benchmark
 
 ## Method
@@ -67,7 +86,7 @@ The full output of `/boot/config.txt` after imaging and options added.
 
 <details>
   <summary>Click here to expand...</summary>
-  
+
   ```
   dtoverlay=disable-bt
   dtoverlay=disable-wifi
@@ -170,7 +189,9 @@ console=serial0,115200 console=tty1 root=PARTUUID=21e60f8c-02 rootfstype=ext4 fs
 
 # Enable NVMe Boot
 
-Update the CM4's bootloader via a Compute Blade dev board's USB-C interface.
+CM4s with a recent version of the bootloader (after July 2021) should be able to boot from NVMe by default. I had to update mine.
+
+The instructions below outline how to update a CM4's bootloader via a Compute Blade dev board's USB-C interface. 
 
 1. Switch to USB-C mode.
 1. Press and hold the nRPIBOOT button.
@@ -192,9 +213,9 @@ Update the CM4's bootloader via a Compute Blade dev board's USB-C interface.
 1. Save `boot.conf`; Ctrl-X, Y, Enter. 
 1. `./update-pieeprom.sh`
 1. `cd ../`
-1. `sudo ./rpiboot -d recovery` (see example output below)
+1. `sudo ./rpiboot -d recovery` 
 
-The update should be complete. Reboot the Compute Blade and it should boot from the attached NVMe SSD.
+Once the update is complete (see output examples below), reboot the Compute Blade and it should boot from the attached NVMe SSD.
 
 ## Examples
 
