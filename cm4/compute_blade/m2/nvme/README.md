@@ -19,7 +19,7 @@ _* See individual product details for benchmarks._
 
 # NVMe Benchmark
 
-## Method
+The steps I used to set up each test and collect information.
 
 * `lsblk` to find device name.
 * `lspci -vvv -s 01:00.0` to collect device info.
@@ -44,7 +44,7 @@ _* See individual product details for benchmarks._
 NVMe SSDs can be imaged the same way you'd image a microSD card.
 
 * **OS:** macOS Ventura 13.1
-* **Adapter:** ICY DOCK MB104U-1SMB w/ Realtek RTL9210B
+* **Adapter:** [ICY DOCK MB104U-1SMB](https://global.icydock.com/product_322.html) w/ [Realtek RTL9210B](https://www.realtek.com/en/products/communications-network-ics/item/rtl9210b-cg)
 * **Tool:** Raspberry Pi Imager v1.7.3
   * Options:
     * Set name.
@@ -54,7 +54,7 @@ NVMe SSDs can be imaged the same way you'd image a microSD card.
 
 I used the ICY DOCK adapter and the official Raspberry Pi Imager to image the M.2 NVMe SSD with Raspberry Pi OS Lite (64-bit).
 
-> Note: The CM4 8GB Lite I used required a bootloader update to enable NVMe boot. Update instructions are outlined in the **Enable NVMe Boot** section below.
+:memo: The CM4 8GB Lite I used required a bootloader update to enable NVMe boot. Update instructions are outlined in the **Enable NVMe Boot** section below.
 
 ## Options
 
@@ -85,7 +85,7 @@ diskutil unmountdisk /dev/disk5 && diskutil eject /dev/disk5
 The full output of `/boot/config.txt` after imaging and options added.
 
 <details>
-  <summary>Click here to expand...</summary>
+  <summary>:page_facing_up: Click here to expand...</summary>
 
   ```
   dtoverlay=disable-bt
