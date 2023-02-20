@@ -266,5 +266,7 @@ capabilities 0x0000007f
 # Resources
 
 * Official Compute Blade documentation (WIP)
-* [raspberrypi/documentation > NVMe boot](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/boot-nvme.adoc)
+* [Raspberry Pi Documentation > Raspberry Pi Hardware > NVMe SSD Boot](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#nvme-ssd-boot) _(same as link below)_
+* [raspberrypi/documentation > NVMe SSD Boot](https://github.com/raspberrypi/documentation/blob/develop/documentation/asciidoc/computers/raspberry-pi/boot-nvme.adoc) _(same as link above)_
+* [Raspberry Pi Documentation > Compute Module Hardware > Flashing the Compute Module eMMC > Compute Module 4 Bootloader](https://www.raspberrypi.com/documentation/computers/compute-module.html#compute-module-4-bootloader)
 * [raspberrypi/usbboot](https://github.com/raspberrypi/usbboot)
