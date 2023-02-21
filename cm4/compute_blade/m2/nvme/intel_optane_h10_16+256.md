@@ -21,7 +21,7 @@ In this case, the 256GB SSD is usable, but the 16GB of Optane NVM is not.
 
 > Source: https://www.asipartner.com/solutions/gaming/intel-optane-memory-h10/#MB%20Compatibility%20List
 
-Unlike the M10, this device *can* boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane M10][intel_optane_m10_32.md].
+Unlike the M10, this device *can* boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane M10](intel_optane_m10_32.md).
 
 # Device Name
 

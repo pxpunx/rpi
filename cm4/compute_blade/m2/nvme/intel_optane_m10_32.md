@@ -11,7 +11,7 @@
 | *Interface* | NVMe |
 | *Bootable* | :x: (see below) |
 
-This device contains 32GB of Optame (3D XPoint) memory. It will not boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane H10][intel_optane_h10_16+256.md].
+This device contains 32GB of Optame (3D XPoint) memory. It will not boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane H10](intel_optane_h10_16+256.md).
 
 # Device Name
 
