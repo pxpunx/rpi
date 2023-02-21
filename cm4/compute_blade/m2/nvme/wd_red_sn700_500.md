@@ -4,13 +4,12 @@
 |:-|:-|
 |----|----|
 | *Name* | Western Digital Red SN700 |
-| *Model* | WDS250G1R0C |
+| *Model* | WDS500G1R0C-68BDK0 |
 | *Capacity* | 500GB |
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
 | *Bootable* | YES |
-| *Benchmark(s)* | local (below) |
 
 # Device Name
 
@@ -116,7 +115,30 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  458G   28K  435G   1% /mnt/sda1
 ```
 
-# Local Benchmark
+# Benchmarks
+
+## PiBenchmarks.com
+
+Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
+
+Full benchmark: TBD
+
+| Category | Test | Result |
+|:-|:-|:-|
+| DD | Disk Write | TBD |
+| HDParm | Disk Read | TBD |
+| HDParm | Cached Disk Read | TBD |
+| FIO | 4K Random Read | TBD |
+| FIO | 4K Random Write | TBD |
+| FIO | 4K Random Read | TBD |
+| FIO | 4K Random Write | TBD |
+| IOZone | 4K Read | TBD |
+| IOZone | 4K Write | TBD |
+| IOZone | 4K Random Read | TBD |
+| IOZone | 4K Random Write | TBD |
+| **Score** | | TBD |
+
+## Jeff Geerling
 
 Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 

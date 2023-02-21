@@ -10,7 +10,6 @@
 | *Key* | M + B |
 | *Interface* | NVMe |
 | *Bootable* | NO (see below) |
-| *Benchmark(s)* | [pibenchmarks.com #67410](https://pibenchmarks.com/benchmark/67410/), local (below) |
 
 This device will not boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane H10][intel_optane_h10_16+256.md].
 
@@ -128,7 +127,30 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4   27G   24K   26G   1% /mnt/sda1
 ```
 
-# Local Benchmark
+# Benchmarks
+
+## PiBenchmarks.com
+
+Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
+
+Full benchmark: [pibenchmarks.com #67410](https://pibenchmarks.com/benchmark/67410/)
+
+| Category | Test | Result |
+|:-|:-|:-|
+| DD | Disk Write | 127 MB/s |
+| HDParm | Disk Read | 358.17 MB/s |
+| HDParm | Cached Disk Read | 358.12 MB/s |
+| FIO | 4K Random Read | 12,495 IOPS |
+| FIO | 4K Random Write | 41,207 IOPS |
+| FIO | 4K Random Read | 49,981 KB/s |
+| FIO | 4K Random Write | 164,828 KB/s |
+| IOZone | 4K Read | 96,991 KB/s |
+| IOZone | 4K Write | 55,791 KB/s |
+| IOZone | 4K Random Read | 92,565 KB/s |
+| IOZone | 4K Random Write | 84,144 KB/s |
+| **Score** | | 17,843 |
+
+## Jeff Geerling
 
 Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 

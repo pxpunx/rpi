@@ -10,7 +10,6 @@
 | *Key* | M |
 | *Interface* | NVMe |
 | *Bootable* | YES |
-| *Benchmark(s)* | [pibenchmarks.com #67377](https://pibenchmarks.com/benchmark/67377/), local (below) |
 
 # Device Name
 
@@ -117,7 +116,30 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  458G   28K  435G   1% /mnt/sda1
 ```
 
-# Local Benchmark
+# Benchmarks
+
+## PiBenchmarks.com
+
+Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
+
+Full benchmark: [pibenchmarks.com #67377](https://pibenchmarks.com/benchmark/67377/)
+
+| Category | Test | Result |
+|:-|:-|:-|
+| DD | Disk Write | 132 MB/s |
+| HDParm | Disk Read | 352.04 MB/s |
+| HDParm | Cached Disk Read | 349.51 MB/s |
+| FIO | 4k Random Read | 12,132 IOPS |
+| FIO | 4k Random Write | 41,967 IOPS |
+| FIO | 4k Random Read | 48,530 KB/s |
+| FIO | 4k Random Write | 167,868 KB/s |
+| IOZone | 4k Read | 90,193 KB/s |
+| IOZone | 4k Write | 57,748 KB/s |
+| IOZone | 4k Random Read | 43,397 KB/s |
+| IOZone | 4k Random Write | 89,487 KB/s |
+| **Score** | | 16,407 |
+
+## Jeff Geerling
 
 Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 

@@ -1,21 +1,21 @@
 # Product Information
 
-| Product | [Solidigm 670p Series SSD](https://www.solidigm.com/products/client/d6/670p.html) |
+| Product | [WD Green SN350 NVMe™ SSD](https://www.westerndigital.com/products/internal-drives/wd-green-sn350-nvme-ssd) |
 |:-|:-|
 |----|----|
-| *Name* | Intel/Solidigm 670p |
-| *Model* | SSDPEKNU512GZ |
-| *Capacity* | 512GB |
+| *Name* | WD Green SN350 |
+| *Model* | WDS240G2G0C-00AJM0 |
+| *Capacity* | 240GB |
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
-| *Bootable* | YES |
+| *Bootable* | :white_check_mark: |
 
 # Device Name
 
 ```
-root@default-pi:~# lsblk | grep nvme[01]
-nvme0n1     259:0    0 476.9G  0 disk 
+# lsblk | grep nvme[01]
+nvme0n1     259:0    0 223.6G  0 disk 
 ```
 
 # Device Information
@@ -24,35 +24,38 @@ nvme0n1     259:0    0 476.9G  0 disk
   <summary>Click here to expand...</summary>
   
   ```
-  root@default-pi:~# lspci -vvv -s 01:00.0
-  01:00.0 Non-Volatile memory controller: Intel Corporation Device f1aa (rev 03) (prog-if 02 [NVM Express])
-    Subsystem: Intel Corporation Device 390f
+  # lspci -vvv -s 01:00.0
+  01:00.0 Non-Volatile memory controller: Sandisk Corp Device 5019 (rev 01) (prog-if 02 [NVM Express])
+    Subsystem: Sandisk Corp Device 5019
     Control: I/O- Mem+ BusMaster+ SpecCycle- MemWINV- VGASnoop- ParErr- Stepping- SERR- FastB2B- DisINTx+
     Status: Cap+ 66MHz- UDF- FastB2B- ParErr- DEVSEL=fast >TAbort- <TAbort- <MAbort- >SERR- <PERR- INTx-
     Latency: 0
     Interrupt: pin A routed to IRQ 63
     Region 0: Memory at 600000000 (64-bit, non-prefetchable) [size=16K]
-    Capabilities: [40] Power Management version 3
+    Region 4: Memory at 600004000 (64-bit, non-prefetchable) [size=256]
+    Capabilities: [80] Power Management version 3
       Flags: PMEClk- DSI- D1- D2- AuxCurrent=0mA PME(D0-,D1-,D2-,D3hot-,D3cold-)
       Status: D0 NoSoftRst+ PME-Enable- DSel=0 DScale=0 PME-
-    Capabilities: [50] MSI: Enable- Count=1/8 Maskable+ 64bit+
+    Capabilities: [90] MSI: Enable- Count=1/32 Maskable- 64bit+
       Address: 0000000000000000  Data: 0000
-      Masking: 00000000  Pending: 00000000
-    Capabilities: [70] Express (v2) Endpoint, MSI 00
-      DevCap:	MaxPayload 512 bytes, PhantFunc 0, Latency L0s unlimited, L1 unlimited
+    Capabilities: [b0] MSI-X: Enable+ Count=17 Masked-
+      Vector table: BAR=0 offset=00002000
+      PBA: BAR=4 offset=00000000
+    Capabilities: [c0] Express (v2) Endpoint, MSI 00
+      DevCap:	MaxPayload 512 bytes, PhantFunc 0, Latency L0s <1us, L1 unlimited
         ExtTag- AttnBtn- AttnInd- PwrInd- RBE+ FLReset+ SlotPowerLimit 0.000W
       DevCtl:	CorrErr- NonFatalErr- FatalErr- UnsupReq-
-        RlxdOrd+ ExtTag- PhantFunc- AuxPwr- NoSnoop- FLReset-
+        RlxdOrd+ ExtTag+ PhantFunc- AuxPwr- NoSnoop+ FLReset-
         MaxPayload 128 bytes, MaxReadReq 512 bytes
-      DevSta:	CorrErr+ NonFatalErr- FatalErr- UnsupReq- AuxPwr+ TransPend-
+      DevSta:	CorrErr- NonFatalErr- FatalErr- UnsupReq- AuxPwr- TransPend-
       LnkCap:	Port #0, Speed 8GT/s, Width x4, ASPM L1, Exit Latency L1 <8us
         ClockPM+ Surprise- LLActRep- BwNot- ASPMOptComp+
       LnkCtl:	ASPM Disabled; RCB 64 bytes, Disabled- CommClk+
         ExtSynch- ClockPM- AutWidDis- BWInt- AutBWInt-
       LnkSta:	Speed 5GT/s (downgraded), Width x1 (downgraded)
         TrErr- Train- SlotClk+ DLActive- BWMgmt- ABWMgmt-
-      DevCap2: Completion Timeout: Range ABCD, TimeoutDis+ NROPrPrP- LTR+
-        10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt- EETLPPrefix-
+      DevCap2: Completion Timeout: Range B, TimeoutDis+ NROPrPrP- LTR+
+        10BitTagComp- 10BitTagReq- OBFF Not Supported, ExtFmt+ EETLPPrefix-
         EmergencyPowerReduction Not Supported, EmergencyPowerReductionInit-
         FRS- TPHComp- ExtTPHComp-
         AtomicOpsCap: 32bit- 64bit- 128bitCAS-
@@ -65,42 +68,28 @@ nvme0n1     259:0    0 476.9G  0 disk
       LnkSta2: Current De-emphasis Level: -3.5dB, EqualizationComplete- EqualizationPhase1-
         EqualizationPhase2- EqualizationPhase3- LinkEqualizationRequest-
         Retimer- 2Retimers- CrosslinkRes: unsupported
-    Capabilities: [b0] MSI-X: Enable+ Count=16 Masked-
-      Vector table: BAR=0 offset=00002000
-      PBA: BAR=0 offset=00002100
     Capabilities: [100 v2] Advanced Error Reporting
       UESta:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
       UEMsk:	DLP- SDES- TLP- FCP- CmpltTO- CmpltAbrt- UnxCmplt- RxOF- MalfTLP- ECRC- UnsupReq- ACSViol-
       UESvrt:	DLP+ SDES+ TLP- FCP+ CmpltTO- CmpltAbrt- UnxCmplt- RxOF+ MalfTLP+ ECRC- UnsupReq- ACSViol-
-      CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout+ AdvNonFatalErr-
+      CESta:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr-
       CEMsk:	RxErr- BadTLP- BadDLLP- Rollover- Timeout- AdvNonFatalErr+
       AERCap:	First Error Pointer: 00, ECRCGenCap+ ECRCGenEn- ECRCChkCap+ ECRCChkEn-
         MultHdrRecCap- MultHdrRecEn- TLPPfxPres- HdrLogCap-
       HeaderLog: 00000000 00000000 00000000 00000000
-    Capabilities: [158 v1] Alternative Routing-ID Interpretation (ARI)
-      ARICap:	MFVC- ACS-, Next Function: 0
-      ARICtl:	MFVC- ACS-, Function Group: 0
-    Capabilities: [168 v1] Secondary PCI Express
-      LnkCtl3: LnkEquIntrruptEn- PerformEqu-
-      LaneErrStat: 0
-    Capabilities: [188 v1] Single Root I/O Virtualization (SR-IOV)
-      IOVCap:	Migration-, Interrupt Message Number: 000
-      IOVCtl:	Enable- Migration- Interrupt- MSE- ARIHierarchy-
-      IOVSta:	Migration-
-      Initial VFs: 6, Total VFs: 6, Number of VFs: 0, Function Dependency Link: 00
-      VF offset: 2, stride: 1, Device ID: 2265
-      Supported Page Size: 00000553, System Page Size: 00000001
-      Region 0: Memory at 0000000000000000 (64-bit, non-prefetchable)
-      VF Migration: offset: 00000000, BIR: 0
-    Capabilities: [1c8 v1] Latency Tolerance Reporting
+    Capabilities: [150 v1] Device Serial Number 00-00-00-00-00-00-00-00
+    Capabilities: [1b8 v1] Latency Tolerance Reporting
       Max snoop latency: 0ns
       Max no snoop latency: 0ns
-    Capabilities: [1d0 v1] L1 PM Substates
-      L1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1+ ASPM_L1.2+ ASPM_L1.1+ L1_PM_Substates+
-          PortCommonModeRestoreTime=10us PortTPowerOnTime=80us
+    Capabilities: [300 v1] Secondary PCI Express
+      LnkCtl3: LnkEquIntrruptEn- PerformEqu-
+      LaneErrStat: 0
+    Capabilities: [900 v1] L1 PM Substates
+      L1SubCap: PCI-PM_L1.2+ PCI-PM_L1.1- ASPM_L1.2+ ASPM_L1.1- L1_PM_Substates+
+          PortCommonModeRestoreTime=32us PortTPowerOnTime=10us
       L1SubCtl1: PCI-PM_L1.2- PCI-PM_L1.1- ASPM_L1.2- ASPM_L1.1-
-          T_CommonMode=0us LTR1.2_Threshold=65536ns
-      L1SubCtl2: T_PwrOn=80us
+          T_CommonMode=0us LTR1.2_Threshold=32768ns
+      L1SubCtl2: T_PwrOn=10us
     Kernel driver in use: nvme
   ```
 </details>
@@ -108,9 +97,9 @@ nvme0n1     259:0    0 476.9G  0 disk
 # Disk Information
 
 ```
-root@default-pi:~# fdisk -l /dev/nvme0n1
-Disk /dev/nvme0n1: 476.94 GiB, 512110190592 bytes, 1000215216 sectors
-Disk model: INTEL SSDPEKNU512GZ
+# fdisk -l /dev/nvme0n1
+Disk /dev/nvme0n1: 223.57 GiB, 240057409536 bytes, 468862128 sectors
+Disk model: WDC WDS240G2G0C-00AJM0                  
 Units: sectors of 1 * 512 = 512 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
@@ -119,9 +108,9 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 # Filesystem Information
 
 ```
-root@default-pi:~# df -Th /dev/nvme0n1
+# df -Th /dev/nvme0n1
 Filesystem     Type  Size  Used Avail Use% Mounted on
-/dev/nvme0n1   ext4  469G   28K  445G   1% /mnt/sda1
+/dev/nvme0n1   ext4  220G   28K  208G   1% /mnt/sda1
 ```
 
 # Benchmarks
@@ -130,22 +119,22 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 
 Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
 
-Full benchmark: [pibenchmarks.com #67388](https://pibenchmarks.com/benchmark/67388/)
+Full benchmark: [pibenchmarks.com #67451](https://pibenchmarks.com/benchmark/67451/)
 
 | Category | Test | Result |
 |:-|:-|:-|
 | DD | Disk Write | 132 MB/s |
-| HDParm | Disk Read | 364.59 MB/s |
-| HDParm | Cached Disk Read | 351.5 MB/s |
-| FIO | 4K Random Read | 13,111 IOPS |
-| FIO | 4K Random Write | 42,577 IOPS |
-| FIO | 4K Random Read | 52,445 KB/s |
-| FIO | 4K Random Write | 170,311 KB/s |
-| IOZone | 4K Read | 90,372 KB/s |
-| IOZone | 4K Write | 53,237 KB/s |
-| IOZone | 4K Random Read | 52,430 KB/s |
-| IOZone | 4K Random Write | 77,974 KB/s |
-| **Score** | | 15,696 |
+| HDParm | Disk Read | 363.23 MB/s |
+| HDParm | Cached Disk Read | 360.60 MB/s |
+| FIO | 4k Random Read | 43,760 IOPS |
+| FIO | 4k Random Write | 12,564 IOPS |
+| FIO | 4k Random Read | 17,5042 KB/s |
+| FIO | 4k Random Write | 50,257 KB/s |
+| IOZone | 4k Read | 82,362 KB/s |
+| IOZone | 4k Write | 56,364 KB/s |
+| IOZone | 4k Random Read | 39,289 KB/s |
+| IOZone | 4k Random Write | 85,848 KB/s |
+| **Score** | | 15,902 |
 
 ## Jeff Geerling
 
@@ -153,9 +142,9 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
 
 <details>
   <summary>Click here to expand...</summary>
-  
+
   ```
-  root@default-pi:~# DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
+  # DEVICE_UNDER_TEST=/dev/nvme0n1 ./disk-benchmark.sh
 
   Raspberry Pi disk benchmarks
   Running fio sequential read test...
@@ -163,39 +152,41 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
   ...
   fio-3.25
   Starting 4 processes
-  Jobs: 4 (f=4): [R(4)][36.4%][r=345MiB/s][r=345 IOPS][eta 00m:07s]
-  Jobs: 4 (f=4): [R(4)][54.5%][r=398MiB/s][r=398 IOPS][eta 00m:05s] 
-  Jobs: 4 (f=4): [R(4)][63.6%][r=396MiB/s][r=395 IOPS][eta 00m:04s]
-  Jobs: 4 (f=4): [R(4)][72.7%][r=396MiB/s][r=395 IOPS][eta 00m:03s]
-  Jobs: 4 (f=4): [R(4)][81.8%][r=395MiB/s][r=394 IOPS][eta 00m:02s]
-  Jobs: 4 (f=4): [R(4)][90.9%][r=399MiB/s][r=398 IOPS][eta 00m:01s]
+  Jobs: 4 (f=4): [R(4)][27.3%][r=396MiB/s][r=395 IOPS][eta 00m:08s]
+  Jobs: 4 (f=4): [R(4)][36.4%][r=398MiB/s][r=397 IOPS][eta 00m:07s]
+  Jobs: 4 (f=4): [R(4)][45.5%][r=398MiB/s][r=397 IOPS][eta 00m:06s]
+  Jobs: 4 (f=4): [R(4)][54.5%][r=397MiB/s][r=397 IOPS][eta 00m:05s]
+  Jobs: 4 (f=4): [R(4)][63.6%][r=397MiB/s][r=396 IOPS][eta 00m:04s]
+  Jobs: 4 (f=4): [R(4)][72.7%][r=397MiB/s][r=396 IOPS][eta 00m:03s]
+  Jobs: 4 (f=4): [R(4)][81.8%][r=398MiB/s][r=397 IOPS][eta 00m:02s]
+  Jobs: 4 (f=4): [R(4)][90.9%][r=396MiB/s][r=395 IOPS][eta 00m:01s]
   Jobs: 4 (f=4): [R(4)][100.0%][r=397MiB/s][r=396 IOPS][eta 00m:00s]
-  fio-rand-read-sequential: (groupid=0, jobs=4): err= 0: pid=587: Sat Feb 18 19:15:02 2023
-    read: IOPS=395, BW=396MiB/s (415MB/s)(4150MiB/10481msec)
-      slat (usec): min=119, max=131581, avg=9123.18, stdev=24241.89
-      clat (msec): min=112, max=1361, avg=629.58, stdev=222.50
-      lat (msec): min=114, max=1451, avg=638.70, stdev=225.69
+  fio-rand-read-sequential: (groupid=0, jobs=4): err= 0: pid=1208: Mon Feb 20 16:46:50 2023
+    read: IOPS=396, BW=397MiB/s (416MB/s)(4221MiB/10644msec)
+      slat (usec): min=117, max=4233, avg=363.91, stdev=564.77
+      clat (msec): min=121, max=1587, avg=634.30, stdev=197.12
+      lat (msec): min=124, max=1588, avg=634.66, stdev=196.86
       clat percentiles (msec):
-      |  1.00th=[  155],  5.00th=[  363], 10.00th=[  477], 20.00th=[  481],
-      | 30.00th=[  481], 40.00th=[  485], 50.00th=[  550], 60.00th=[  634],
-      | 70.00th=[  642], 80.00th=[  944], 90.00th=[  961], 95.00th=[  978],
-      | 99.00th=[ 1116], 99.50th=[ 1217], 99.90th=[ 1351], 99.95th=[ 1351],
-      | 99.99th=[ 1368]
-    bw (  KiB/s): min=299008, max=503808, per=98.36%, avg=398808.50, stdev=15639.72, samples=80
-    iops        : min=  292, max=  492, avg=389.30, stdev=15.28, samples=80
-    lat (msec)   : 250=3.52%, 500=43.59%, 750=26.02%, 1000=23.06%, 2000=3.81%
-    cpu          : usr=0.07%, sys=4.23%, ctx=3957, majf=0, minf=65638
-    IO depths    : 1=0.1%, 2=0.2%, 4=0.4%, 8=0.8%, 16=1.5%, 32=3.1%, >=64=93.9%
+      |  1.00th=[  144],  5.00th=[  393], 10.00th=[  485], 20.00th=[  485],
+      | 30.00th=[  485], 40.00th=[  642], 50.00th=[  642], 60.00th=[  642],
+      | 70.00th=[  642], 80.00th=[  651], 90.00th=[  969], 95.00th=[  969],
+      | 99.00th=[ 1267], 99.50th=[ 1435], 99.90th=[ 1552], 99.95th=[ 1569],
+      | 99.99th=[ 1586]
+    bw (  KiB/s): min=323314, max=485102, per=100.00%, avg=406181.50, stdev=17102.91, samples=80
+    iops        : min=  314, max=  473, avg=395.70, stdev=16.72, samples=80
+    lat (msec)   : 250=3.17%, 500=28.74%, 750=51.01%, 1000=15.23%, 2000=1.85%
+    cpu          : usr=0.12%, sys=4.15%, ctx=4246, majf=0, minf=65639
+    IO depths    : 1=0.1%, 2=0.2%, 4=0.4%, 8=0.8%, 16=1.5%, 32=3.0%, >=64=94.0%
       submit    : 0=0.0%, 4=100.0%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.0%, >=64=0.0%
       complete  : 0=0.0%, 4=99.9%, 8=0.0%, 16=0.0%, 32=0.0%, 64=0.1%, >=64=0.0%
-      issued rwts: total=4150,0,0,0 short=0,0,0,0 dropped=0,0,0,0
+      issued rwts: total=4221,0,0,0 short=0,0,0,0 dropped=0,0,0,0
       latency   : target=0, window=0, percentile=100.00%, depth=64
 
   Run status group 0 (all jobs):
-    READ: bw=396MiB/s (415MB/s), 396MiB/s-396MiB/s (415MB/s-415MB/s), io=4150MiB (4352MB), run=10481-10481msec
+    READ: bw=397MiB/s (416MB/s), 397MiB/s-397MiB/s (416MB/s-416MB/s), io=4221MiB (4426MB), run=10644-10644msec
 
   Disk stats (read/write):
-    nvme0n1: ios=16466/169, merge=0/9, ticks=8169297/64043, in_queue=8233735, util=99.32%
+    nvme0n1: ios=16527/4, merge=0/0, ticks=10128106/3, in_queue=10128111, util=99.14%
 
   Running iozone 1024K random read and write tests...
     Iozone: Performance Test of File I/O
@@ -213,7 +204,7 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
                 Vangel Bojaxhi, Ben England, Vikentsi Lapa,
                 Alexey Skidanov, Sudhir Kumar.
 
-    Run began: Sat Feb 18 19:15:02 2023
+    Run began: Mon Feb 20 16:46:50 2023
 
     Include fsync in write timing
     O_DIRECT feature enabled
@@ -228,7 +219,7 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
     File stride size set to 17 * record size.
                                                                 random    random     bkwd    record    stride                                    
                 kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread
-            102400    1024   372838   375725                     366127   376891                                                                
+            102400    1024   383514   386945                     378221   386509                                                                
 
   iozone test complete.
 
@@ -248,7 +239,7 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
                 Vangel Bojaxhi, Ben England, Vikentsi Lapa,
                 Alexey Skidanov, Sudhir Kumar.
 
-    Run began: Sat Feb 18 19:15:03 2023
+    Run began: Mon Feb 20 16:46:51 2023
 
     Include fsync in write timing
     O_DIRECT feature enabled
@@ -263,7 +254,7 @@ Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.git
     File stride size set to 17 * record size.
                                                                 random    random     bkwd    record    stride                                    
                 kB  reclen    write  rewrite    read    reread    read     write     read   rewrite      read   fwrite frewrite    fread  freread
-            102400       4    54663    89183                      54465    84200                                                                
+            102400       4    56185    89196                      39337    85762                                                                
 
   iozone test complete.
 

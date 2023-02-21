@@ -2,24 +2,26 @@ Notes from my M.2 SSD tests on the Compute Blade platform.
 
 # Product List
 
-| Product | Model | Capactiy | Form Factor | Key | Interface | Bootable |
-|:-|:-|:-|:-|:-|:-|:-|
-| [Crucial P3](crucial_p3_500.md) | CT500P3SSD8 | 500GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [Intel 670p](intel_670p_512.md) | SSDPEKNU512GZ | 512GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [Intel Optane M10](intel_optane_m10_32.md) | MEMPEK1J032GAD | 32GB | M.2 2280 | M + B | NVMe | :x: |
-| [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A | 16GB + 256GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [Kingston NV2](kingston_nv2_250.md) | SNV2S250G | 250GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [Patriot P310](patriot_p310_240.md) | xxx | 240GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [PNY CS1030](pny_cs1030_250.md) | xxx | 250GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [Samsung 970 EVO](sec_970_evo_500.md) | MZ-V7E500BW | 500GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [WD Blue SN570](wd_blue_sn570_250.md) | WDS250G3B0C | 250GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
-| [WD Red SN700](wd_red_sn700_500.md) | WDS250G1R0C | 500GB | M.2 2280 | M | NVMe | :heavy_check_mark: |
+| Product                                          | Model              | Capactiy     | Form Factor | Key   | Interface | Bootable           |
+|:-------------------------------------------------|:-------------------|:-------------|:------------|:------|:----------|:-------------------|
+| [Crucial P3](crucial_p3_500.md)                  | CT500P3SSD8        | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: | 
+| [Intel 670p](intel_670p_512.md)                  | SSDPEKNU512GZ      | 512GB        | M.2 2280    | M     | NVMe      | :white_check_mark: | 
+| [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A      | 16GB + 256GB | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [Intel Optane M10](intel_optane_m10_32.md)       | MEMPEK1J032GAD     | 32GB         | M.2 2280    | M + B | NVMe      | :x:                |
+| [Kingston NV2](kingston_nv2_250.md)              | SNV2S/250G         | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [Patriot P310](patriot_p310_240.md)              | P310P240GM28       | 240GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [PNY CS1030](pny_cs1030_250.md)                  | M280CS1030-250-RB  | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [Samsung 970 EVO](sec_970_evo_500.md)            | MZ-V7E500          | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [TEAMGROUP MP33](teamgroup_mp33_256.md)          | TM8FP6256G0C101    | 256GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [WD Blue SN570](wd_blue_sn570_250.md)            | WDS250G3B0C-00AZN0 | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [WD Green SN350](wd_green_sn350_240.md)          | WDS240G2G0C-00AJM0 | 240GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [WD Red SN700](wd_red_sn700_500.md)              | WDS500G1R0C-68BDK0 | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 
 _* See individual product details for benchmarks._
 
 # NVMe Benchmark
 
-The steps I used to set up each test and collect information.
+The steps I used to set up each test and collect information. Total power draw while tests were performed between 4W and 6W on a [USW Pro 24 PoE](https://store.ui.com/collections/unifi-network-switching/products/usw-pro-24-poe) PoE++ (60W) port.
 
 * `lsblk` to find device name.
 * `lspci -vvv -s 01:00.0` to collect device info.

@@ -4,13 +4,12 @@
 |:-|:-|
 |----|----|
 | *Name* | Patriot P310 |
-| *Model* | XXX |
+| *Model* | P310P240GM28 |
 | *Capacity* | 240GB |
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
 | *Bootable* | YES |
-| *Benchmark(s)* | [pibenchmarks.com #67390](https://pibenchmarks.com/benchmark/67390/), local (below) |
 
 # Device Name
 
@@ -119,7 +118,30 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  220G   28K  208G   1% /mnt/sda1
 ```
 
-# Local Benchmark
+# Benchmarks
+
+## PiBenchmarks.com
+
+Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
+
+Full benchmark: [pibenchmarks.com #67390](https://pibenchmarks.com/benchmark/67390/)
+
+| Category | Test | Result |
+|:-|:-|:-|
+| DD | Disk Write | 133 MB/s |
+| HDParm | Disk Read | 365.23 MB/s |
+| HDParm | Cached Disk Read | 362.73 MB/s |
+| FIO | 4K Random Read | 12,768 IOPS |
+| FIO | 4K Random Write | 42,139 IOPS |
+| FIO | 4K Random Read | 51,072 KB/s |
+| FIO | 4K Random Write | 168,559 KB/s |
+| IOZone | 4K Read | 79,526 KB/s |
+| IOZone | 4K Write | 58,526 KB/s |
+| IOZone | 4K Random Read | 49,836 KB/s |
+| IOZone | 4K Random Write | 90,129 KB/s |
+| **Score** | | 16,711 |
+
+## Jeff Geerling
 
 Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 

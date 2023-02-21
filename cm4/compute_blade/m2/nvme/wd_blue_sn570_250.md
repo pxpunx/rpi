@@ -4,13 +4,12 @@
 |:-|:-|
 |----|----|
 | *Name* | Western Digital Blue SN570 |
-| *Model* | WDS250G3B0C |
+| *Model* | WDS250G3B0C-00AZN0 |
 | *Capacity* | 250GB |
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
 | *Bootable* | YES |
-| *Benchmark(s)* | [pibenchmarks.com #67387](https://pibenchmarks.com/benchmark/67387/), local (below) |
 
 # Device Name
 
@@ -114,7 +113,30 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  229G   28K  217G   1% /mnt/sda1
 ```
 
-# Local Benchmark
+# Benchmarks
+
+## PiBenchmarks.com
+
+Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
+
+Full benchmark: [pibenchmarks.com #67387](https://pibenchmarks.com/benchmark/67387/)
+
+| Category | Test | Result |
+|:-|:-|:-|
+| DD | Disk Write | 133 MB/s |
+| HDParm | Disk Read | 363.72 MB/s |
+| HDParm | Cached Disk Read | 361.07 MB/s |
+| FIO | 4K Random Read | 12,434 IOPS |
+| FIO | 4K Random Write | 42,226 IOPS |
+| FIO | 4K Random Read | 49,738 KB/s |
+| FIO | 4K Random Write | 168,907 KB/s |
+| IOZone | 4K Read | 86,584 KB/s |
+| IOZone | 4K Write | 57,421 KB/s |
+| IOZone | 4K Random Read | 45,930 KB/s |
+| IOZone | 4K Random Write | 89,737 KB/s |
+| **Score** | | 16,545 |
+
+## Jeff Geerling
 
 Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 

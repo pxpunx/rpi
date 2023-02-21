@@ -10,7 +10,6 @@
 | *Key* | M |
 | *Interface* | NVMe |
 | *Bootable* | YES |
-| *Benchmark(s)* | local (below) |
 
 This NVMe device has a 16GB of Optane (3D XPoint) NVM as well as a 256GB SSD on the same M.2 device. 
 
@@ -124,8 +123,30 @@ I/O size (minimum/optimal): 512 bytes / 512 bytes
 Filesystem     Type  Size  Used Avail Use% Mounted on
 /dev/nvme0n1   ext4  234G   28K  222G   1% /mnt/sda1
 ```
+# Benchmarks
 
-# Local Benchmark
+## PiBenchmarks.com
+
+Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
+
+Full benchmark: TBD
+
+| Category | Test | Result |
+|:-|:-|:-|
+| DD | Disk Write | TBD |
+| HDParm | Disk Read | TBD |
+| HDParm | Cached Disk Read | TBD |
+| FIO | 4K Random Read | TBD |
+| FIO | 4K Random Write | TBD |
+| FIO | 4K Random Read | TBD |
+| FIO | 4K Random Write | TBD |
+| IOZone | 4K Read | TBD |
+| IOZone | 4K Write | TBD |
+| IOZone | 4K Random Read | TBD |
+| IOZone | 4K Random Write | TBD |
+| **Score** | | TBD |
+
+## Jeff Geerling
 
 Credit: [Jeff Geerling](https://www.jeffgeerling.com/) ([source](https://raw.githubusercontent.com/geerlingguy/pi-cluster/master/benchmarks/disk-benchmark.sh))
 
