@@ -9,7 +9,7 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
-| *Bootable* | YES |
+| *Bootable* | :white_check_mark: |
 
 This NVMe device has a 16GB of Optane (3D XPoint) NVM as well as a 256GB SSD on the same M.2 device. 
 

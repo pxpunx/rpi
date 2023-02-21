@@ -4,8 +4,8 @@ Notes from my M.2 SSD tests on the Compute Blade platform.
 
 | Product                                          | Model              | Capactiy     | Form Factor | Key   | Interface | Bootable           |
 |:-------------------------------------------------|:-------------------|:-------------|:------------|:------|:----------|:-------------------|
-| [Crucial P3](crucial_p3_500.md)                  | CT500P3SSD8        | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: | 
-| [Intel 670p](intel_670p_512.md)                  | SSDPEKNU512GZ      | 512GB        | M.2 2280    | M     | NVMe      | :white_check_mark: | 
+| [Crucial P3](crucial_p3_500.md)                  | CT500P3SSD8        | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| [Intel 670p](intel_670p_512.md)                  | SSDPEKNU512GZ      | 512GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A      | 16GB + 256GB | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [Intel Optane M10](intel_optane_m10_32.md)       | MEMPEK1J032GAD     | 32GB         | M.2 2280    | M + B | NVMe      | :x:                |
 | [Kingston NV2](kingston_nv2_250.md)              | SNV2S/250G         | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
@@ -87,7 +87,7 @@ diskutil unmountdisk /dev/disk5 && diskutil eject /dev/disk5
 The full output of `/boot/config.txt` after imaging and options added.
 
 <details>
-  <summary>:page_facing_up: Click here to expand...</summary>
+  <summary>Click here to expand...</summary>
 
   ```
   dtoverlay=disable-bt

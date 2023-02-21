@@ -9,7 +9,7 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
-| *Bootable* | YES |
+| *Bootable* | :white_check_mark: |
 
 # Device Name
 
