@@ -9,6 +9,9 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *Controller* | TBD |
+| *NAND* | TBD |
+| *DRAM* | TBD |
 | *Bootable* | :white_check_mark: |
 
 # Device Name

@@ -3,13 +3,19 @@
 | Product | [WD Green SN350 NVMe™ SSD](https://www.westerndigital.com/products/internal-drives/wd-green-sn350-nvme-ssd) |
 |:-|:-|
 |----|----|
-| *Name* | WD Green SN350 |
+| *Name* | Western Digital Green SN350 |
 | *Model* | WDS240G2G0C-00AJM0 |
 | *Capacity* | 240GB |
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *Controller* | Custom SanDisk |
+| *NAND* | SanDisk 060948 256G, QLC? |
+| *DRAM* | - |
 | *Bootable* | :white_check_mark: |
+
+* [WD Green SN350 1TB NVMe SSD Review](https://www.servethehome.com/wd-green-sn350-1tb-nvme-ssd-review/)
+* [Western Digital Launches WD Green SN350 M.2 SSD](https://www.tomshardware.com/news/western-digital-launches-wd-green-sn350-m2-nvme-ssd)
 
 # Device Name
 

@@ -9,7 +9,12 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *Controller* | Phison PS5021-E21T |
+| *NAND* | Micron 176L N48R QLC |
+| *DRAM* | - |
 | *Bootable* | :white_check_mark: |
+
+* [Crucial P3 SSD Review: Solid Secondary SSD](https://www.tomshardware.com/reviews/crucial-p3-ssd-review)
 
 # Device Name
 

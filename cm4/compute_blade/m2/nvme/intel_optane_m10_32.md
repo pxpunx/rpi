@@ -9,7 +9,11 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M + B |
 | *Interface* | NVMe |
+| *Optane Controller* | Intel, unknown |
+| *Optane Memory* | Intel 3D XPoint |
 | *Bootable* | :x: (see below) |
+
+* [The Intel Optane Memory M10 (64GB) Review: Optane Caching Refreshed](https://www.anandtech.com/show/12748/the-intel-optane-memory-m10-64gb-review-optane-caching-refreshed)
 
 This device contains 32GB of Optame (3D XPoint) memory. It will not boot a CM4 installed on a Compute Blade. Compare **Boot Information** below with the same for the [Intel Optane H10](intel_optane_h10_16+256.md).
 
@@ -326,7 +330,7 @@ nvme0n1     259:0    0 27.3G  0 disk
 └─nvme0n1p2 259:2    0  1.6G  0 part 
 ```
 
-# Disk Information
+## Disk Information
 
 ```
 # fdisk -l /dev/nvme0n1

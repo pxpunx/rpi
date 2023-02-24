@@ -9,7 +9,14 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *Controller* | Varies <sup>1</sup> |
+| *NAND* | Varies <sup>1</sup> |
+| *DRAM* | - |
 | *Bootable* | :white_check_mark: |
+
+ <sup>1</sup> *Controller and NAND varies, apparently even between different batches of the same capacity drives.*
+
+* [Kingston NV2 SSD Review: Cheap But Risky](https://www.tomshardware.com/reviews/kingston-nv2-ssd)
 
 # Device Name
 

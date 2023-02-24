@@ -9,7 +9,14 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *Controller* | Custom SanDisk |
+| *NAND* | SanDisk (Kioxia?) 96L TLC BiCS4 |
+| *DRAM* | Yes, ~2GB |
 | *Bootable* | :white_check_mark: |
+
+* [Western Digital Introduces WD Red SN700: PCIe 3.0 M.2 NVMe SSDs for NAS Systems](https://www.anandtech.com/show/16978/western-digital-introduces-wd-red-sn700-pcie-30-m2-nvme-ssds-for-nas-systems)
+* [WD Red SN700 4TB Review](https://www.storagereview.com/review/wd-red-sn700-4tb-review)
+* [WD Red SN700 SSD Review: An Improved SN750 by Another Name](https://www.tomshardware.com/reviews/wd-red-sn700-review)
 
 # Device Name
 
@@ -121,22 +128,22 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 
 Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
 
-Full benchmark: TBD
+Full benchmark: [pibenchmarks.com](https://pibenchmarks.com/benchmark/67379/)
 
 | Category | Test | Result |
 |:-|:-|:-|
-| DD | Disk Write | TBD |
-| HDParm | Disk Read | TBD |
-| HDParm | Cached Disk Read | TBD |
-| FIO | 4K Random Read | TBD |
-| FIO | 4K Random Write | TBD |
-| FIO | 4K Random Read | TBD |
-| FIO | 4K Random Write | TBD |
-| IOZone | 4K Read | TBD |
-| IOZone | 4K Write | TBD |
-| IOZone | 4K Random Read | TBD |
-| IOZone | 4K Random Write | TBD |
-| **Score** | | TBD |
+| DD | Disk Write | 130 MB/s |
+| HDParm | Disk Read | 364.9 MB/s |
+| HDParm | Cached Disk Read | 362.02 MB/s |
+| FIO | 4K Random Read | 12,427 IOPS |
+| FIO | 4K Random Write | 38,496 IOPS |
+| FIO | 4K Random Read | 49,708 KB/s |
+| FIO | 4K Random Write | 153,984 KB/s |
+| IOZone | 4K Read | 79,442 KB/s |
+| IOZone | 4K Write | 55,676 KB/s |
+| IOZone | 4K Random Read | 39,982 KB/s |
+| IOZone | 4K Random Write | 82,309 KB/s |
+| **Score** | | 15,295 |
 
 ## Jeff Geerling
 

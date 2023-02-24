@@ -9,7 +9,13 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *NAND Controller* | Silicon Motion SM2263 |
+| *NAND Flash* | Intel 64L 3D QLC |
+| *Optane Controller* | Intel SLL3D |
+| *Optane Memory* | Intel 3D XPoint |
 | *Bootable* | :white_check_mark: |
+
+* [The Intel Optane Memory H10 Review: QLC and Optane In One SSD](https://www.anandtech.com/show/14249/the-intel-optane-memory-h10-review-two-ssds-in-one)
 
 This NVMe device has a 16GB of Optane (3D XPoint) NVM as well as a 256GB SSD on the same M.2 device. 
 

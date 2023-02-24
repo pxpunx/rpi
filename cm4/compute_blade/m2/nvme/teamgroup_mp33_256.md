@@ -9,7 +9,13 @@
 | *Form Factor* | M.2 2280 |
 | *Key* | M |
 | *Interface* | NVMe |
+| *Controller* | Phison PS5013-E13T |
+| *NAND* | Intel, Toshiba, or Micron 96L 3D TLC |
+| *DRAM* | - |
 | *Bootable* | :white_check_mark: |
+
+* [Team Group Unveils MP33 SSDs: Entry-Level PCIe Drives](https://www.anandtech.com/show/14927/team-group-unveils-mp33-ssds-entrylevel-pcie-drives)
+* [Team Group MP33 M.2 NVMe SSD Review: NVMe performance at SATA prices](https://www.tomshardware.com/reviews/team-group-mp33-m2-nvme-ssd)
 
 # Device Name
 
