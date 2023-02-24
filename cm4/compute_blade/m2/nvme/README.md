@@ -12,10 +12,10 @@ Notes from my M.2 SSD tests on the Compute Blade platform.
 | [Patriot P310](patriot_p310_240.md)              | P310P240GM28       | 240GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [PNY CS1030](pny_cs1030_250.md)                  | M280CS1030-250-RB  | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [Samsung 970 EVO](sec_970_evo_500.md)            | MZ-V7E500          | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
-| [Solidigm XXX]()
+| Solidigm P41 Plus | TBD | 512GB | M.2 2280 | M | NVMe | TBD |
 | [TEAMGROUP MP33](teamgroup_mp33_256.md)          | TM8FP6256G0C101    | 256GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
-| [Transcend XXX]()
-| [WD Black XXX]()
+| Transcend 110S | TBD | 256GB | M.2 2280 | M | NVMe | TBD |
+| WD Black SN770 | TBD | 250GB | M.2 2280 | M | NVMe | TBD |
 | [WD Blue SN570](wd_blue_sn570_250.md)            | WDS250G3B0C-00AZN0 | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [WD Green SN350](wd_green_sn350_240.md)          | WDS240G2G0C-00AJM0 | 240GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [WD Red SN700](wd_red_sn700_500.md)              | WDS500G1R0C-68BDK0 | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
