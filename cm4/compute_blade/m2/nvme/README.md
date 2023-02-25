@@ -9,9 +9,14 @@ Notes from my M.2 SSD tests on the Compute Blade platform.
 | [Intel Optane H10](intel_optane_h10_16%2B256.md) | HBRPEKNX0101A      | 16GB + 256GB | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [Intel Optane M10](intel_optane_m10_32.md)       | MEMPEK1J032GAD     | 32GB         | M.2 2280    | M + B | NVMe      | :x:                |
 | [Kingston NV2](kingston_nv2_250.md)              | SNV2S/250G         | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| Kioxia BG4 | TBD | 128GB | M.2 2230 | M | NVMe | TBD |
+| Micron 2450 | TBD | 256GB | M.2 2280 | M | NVMe | TBD |
+| Micron 3400 | TBD | 512GB | M.2 2280 | M | NVMe | TBD |
 | [Patriot P310](patriot_p310_240.md)              | P310P240GM28       | 240GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [PNY CS1030](pny_cs1030_250.md)                  | M280CS1030-250-RB  | 250GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | [Samsung 970 EVO](sec_970_evo_500.md)            | MZ-V7E500          | 500GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
+| Samsumg PM991a | TBD | 256GB | M.2 2230 | M | NVMe | TBD |
+| SK hynix BC711 | TBD | 256GB | M.2 2280 | M | NVMe | TBD |
 | Solidigm P41 Plus | TBD | 512GB | M.2 2280 | M | NVMe | TBD |
 | [TEAMGROUP MP33](teamgroup_mp33_256.md)          | TM8FP6256G0C101    | 256GB        | M.2 2280    | M     | NVMe      | :white_check_mark: |
 | Transcend 110S | TBD | 256GB | M.2 2280 | M | NVMe | TBD |
