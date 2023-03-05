@@ -2,7 +2,7 @@ Notes from my M.2 SSD tests on the Compute Blade platform.
 
 # Product List
 
-A list of NVMe SSDs tested with the Compute Blace RC2 w/ CM4 8GB Lite (CM4008000). All SSDs work as non-boot disks, but some do not work as boot disks.
+A list of NVMe SSDs tested with the Compute Blade RC2 w/ CM4 8GB Lite (CM4008000). All SSDs work as non-boot disks, but some do not work as boot disks.
 
 | Product                                          | Model              | Capactiy     | Form Factor | Key   | Boot Disk          | Non-Boot Disk      |
 |:-------------------------------------------------|:-------------------|:-------------|:------------|:------|:-------------------|:-------------------|
