@@ -12,7 +12,9 @@
 | *Controller* | Varies <sup>1</sup> |
 | *NAND* | Varies <sup>1</sup> |
 | *DRAM* | - |
-| *Bootable* | :white_check_mark: |
+| *Boot Disk* | :white_check_mark: |
+| *Non-Boot Disk* | :white_check_mark: |
+| *Adapter* | - |
 
  <sup>1</sup> *Controller and NAND varies, apparently even between different batches of the same capacity drives.*
 

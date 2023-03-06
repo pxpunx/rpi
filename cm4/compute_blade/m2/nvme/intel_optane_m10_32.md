@@ -11,7 +11,10 @@
 | *Interface* | NVMe |
 | *Optane Controller* | Intel, unknown |
 | *Optane Memory* | Intel 3D XPoint |
-| *Bootable* | :x: (see below) |
+| *Boot Disk* | :x: (see below) |
+| *Non-Boot Disk* | :white_check_mark: |
+| *Adapter* | - |
+
 
 * [The Intel Optane Memory M10 (64GB) Review: Optane Caching Refreshed](https://www.anandtech.com/show/12748/the-intel-optane-memory-m10-64gb-review-optane-caching-refreshed)
 

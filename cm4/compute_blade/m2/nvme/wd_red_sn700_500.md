@@ -12,7 +12,9 @@
 | *Controller* | Custom SanDisk |
 | *NAND* | SanDisk (Kioxia?) 96L TLC BiCS4 |
 | *DRAM* | Yes, ~2GB |
-| *Bootable* | :white_check_mark: |
+| *Boot Disk* | :white_check_mark: |
+| *Non-Boot Disk* | :white_check_mark: |
+| *Adapter* | - |
 
 * [Western Digital Introduces WD Red SN700: PCIe 3.0 M.2 NVMe SSDs for NAS Systems](https://www.anandtech.com/show/16978/western-digital-introduces-wd-red-sn700-pcie-30-m2-nvme-ssds-for-nas-systems)
 * [WD Red SN700 4TB Review](https://www.storagereview.com/review/wd-red-sn700-4tb-review)

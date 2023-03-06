@@ -12,7 +12,7 @@ A list of NVMe SSDs tested with the Compute Blade RC2 w/ CM4 8GB Lite (CM4008000
 | [Intel Optane M10](intel_optane_m10_32.md)       | MEMPEK1J032GAD     | 32GB         | M.2 2280    | M + B | :x:                | :white_check_mark: |
 | [Kingston NV2](kingston_nv2_250.md)              | SNV2S/250G         | 250GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [Kingston SNS8154P3](kingston_sns8154p3_256.md)  | RBUSNS8154P3256GJ1 | 256GB        | M.2 2280    | M + B | :white_check_mark: | :white_check_mark: |
-| [Kioxia BG4](kioxia_bg4_128.md)                  | KBG40ZNS128G       | 128GB        | M.2 2230    | M     | :white_check_mark: | :white_check_mark: |
+| [KIOXIA BG4](kioxia_bg4_128.md)                  | KBG40ZNS128G       | 128GB        | M.2 2230    | M     | :white_check_mark: | :white_check_mark: |
 | [Micron 2450](micron_2450_256.md)                | MTFDKBA256TFK      | 256GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [Micron 3400](micron_3400_512.md)                | MTFDKBA512TFH      | 512GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [Patriot P310](patriot_p310_240.md)              | P310P240GM28       | 240GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
@@ -31,6 +31,8 @@ A list of NVMe SSDs tested with the Compute Blade RC2 w/ CM4 8GB Lite (CM4008000
 | [WD SN520](wd_sn520_256.md)                      | SDAPNUW-256G-1006  | 256GB        | M.2 2280    | M + B | :white_check_mark: | :white_check_mark: |
 
 See individual product details for benchmarks.
+
+Some drives were tested with the use of an [Ableconn M2MN-151M](http://ableconn.com/products_2.php?gid=137) adapter to preserve the Compute Blade's M.2 connector. See product details for adapter use indication.
 
 # NVMe Benchmark
 

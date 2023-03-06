@@ -12,7 +12,9 @@
 | *Controller* | TBD |
 | *NAND* | TBD |
 | *DRAM* | TBD |
-| *Bootable* | :white_check_mark: |
+| *Boot Disk* | :white_check_mark: |
+| *Non-Boot Disk* | :white_check_mark: |
+| *Adapter* | - |
 
 # Device Name
 

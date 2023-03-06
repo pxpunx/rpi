@@ -12,7 +12,9 @@
 | *Controller* | Custom SanDisk |
 | *NAND* | SanDisk (Toshiba?) 112L 3D TLC BiCS5 |
 | *DRAM* | - |
-| *Bootable* | :white_check_mark: |
+| *Boot Disk* | :white_check_mark: |
+| *Non-Boot Disk* | :white_check_mark: |
+| *Adapter* | - |
 
 * [Western Digital Updates WD Blue Series with SN570 DRAM-less NVMe SSD](https://www.anandtech.com/show/16988/western-digital-updates-wd-blue-series-with-sn570-dramless-nvme-ssd)
 * [WD Blue SN570 M.2 NVMe SSD Review: Bleeding-Edge Bargain](https://www.tomshardware.com/reviews/wd-blue-sn570-review)

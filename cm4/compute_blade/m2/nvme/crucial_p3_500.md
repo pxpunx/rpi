@@ -12,7 +12,9 @@
 | *Controller* | Phison PS5021-E21T |
 | *NAND* | Micron 176L N48R QLC |
 | *DRAM* | - |
-| *Bootable* | :white_check_mark: |
+| *Boot Disk* | :white_check_mark: |
+| *Non-Boot Disk* | :white_check_mark: |
+| *Adapter* | - |
 
 * [Crucial P3 SSD Review: Solid Secondary SSD](https://www.tomshardware.com/reviews/crucial-p3-ssd-review)
 
