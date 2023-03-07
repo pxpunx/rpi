@@ -18,7 +18,7 @@ A list of NVMe SSDs tested with the Compute Blade RC2 w/ CM4 8GB Lite (CM4008000
 | [Patriot P310](patriot_p310_240.md)              | P310P240GM28       | 240GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [PNY CS1030](pny_cs1030_250.md)                  | M280CS1030-250-RB  | 250GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [Samsung 970 EVO](sec_970_evo_500.md)            | MZ-V7E500          | 500GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
-| [Samsumg PM991a](sec_pm991a_256.md)              | TBD                | 256GB        | M.2 2230    | M     | :white_check_mark: | :white_check_mark: |
+| [Samsumg PM991a](sec_pm991a_256.md)              | MZ9LQ256HBJ        | 256GB        | M.2 2230    | M     | :white_check_mark: | :white_check_mark: |
 | [SK hynix BC711](skhynix_bc711_256.md)           | HFM256GD3JX016N    | 256GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [Solidigm P41 Plus](solidigm_p41_plus_512.md)    | SSDPFKNU512GZ      | 512GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
 | [TEAMGROUP MP33](teamgroup_mp33_256.md)          | TM8FP6256G0C101    | 256GB        | M.2 2280    | M     | :white_check_mark: | :white_check_mark: |
