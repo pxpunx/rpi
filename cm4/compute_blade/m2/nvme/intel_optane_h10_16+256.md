@@ -137,7 +137,7 @@ Filesystem     Type  Size  Used Avail Use% Mounted on
 
 Credit: [James C. Chambers](https://jamesachambers.com/) ([source](https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh))
 
-Full benchmark: TBD
+Full benchmark: [pibenchmarks.com #67412](https://pibenchmarks.com/benchmark/67412/)
 
 | Category | Test | Result |
 |:-|:-|:-|
